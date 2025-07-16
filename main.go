@@ -115,14 +115,14 @@ func aiMove() {
 	buttons[i][j].SetText("O")
 
 	if checkWin("O") {
-		dialog.ShowInformation("Joc terminat", "O (AI) a câștigat!", myWindow)
+		dialog.ShowInformation("Game over", "AI won", myWindow)
 		resetBoard()
 		updateButtons()
 		return
 	}
 
 	if isBoardFull() {
-		dialog.ShowInformation("Remiză", "Nu există câștigător!", myWindow)
+		dialog.ShowInformation("Game over", "DRAW", myWindow)
 		resetBoard()
 		updateButtons()
 		return
